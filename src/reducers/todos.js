@@ -37,7 +37,7 @@ export default todos;
 
 export const getVisibleTodos = (state, filter) => {
     const allTodos = getAllTodos(state);
-    console.log(state);
+
     switch (filter) {
         case 'all':
             return allTodos;
