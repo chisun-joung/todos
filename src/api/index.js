@@ -39,3 +39,14 @@ export const fetchTodos = (filter) =>
         throw new Error(`Unknown filter: ${filter}`);
     }
   });
+//25_creating data on the server
+export const addTodo = (text) =>
+  delay(500).then(() => {
+    const todo = {
+        id: v4(),
+        text,
+        completed: false,
+    };
+    fakeDatabase.todos.push(todo);
+    return todo;
+  })
