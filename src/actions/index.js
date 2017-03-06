@@ -41,7 +41,7 @@ export const addTodo = (text) => (dispatch) =>
   });
 
 
-export const toggleTodo = (id) => ({
+export const toggleTodo = (id) => (dispatch) => ({
   type: 'TOGGLE_TODO',
   id,
-});
+;
